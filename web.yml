@@ -18,13 +18,13 @@
         dest: /var/www/html/index.html
     - name: Building Docker Image
       docker_image:
-        name: amazonlinux
+        name: amazon
         source: build
         build:
           path: /project
     - name: Creating the container
       docker_container:
-        name: amazonlinux
+        name: amazon
         image: amazonlinux:latest
         ports:
           - "80:80"
