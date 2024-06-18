@@ -22,7 +22,7 @@
         source: build
         build:
           path: /project
-    -name: Creating the container
+    - name: Creating the container
      docker_container:
        name: amazonlinux
        image: amazonlinux:latest
