@@ -23,9 +23,9 @@
         build:
           path: /project
     - name: Creating the container
-     docker_container:
-       name: amazonlinux
-       image: amazonlinux:latest
-       ports:
-         - "80:80"
+      docker_container:
+        name: amazonlinux
+        image: amazonlinux:latest
+        ports:
+          - "80:80"
          
