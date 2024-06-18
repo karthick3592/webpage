@@ -12,8 +12,20 @@
         name: httpd
         state: started
         enabled: yes
-
     - name: copy index.html
       ansible.builtin.copy:
         src: /home/karthick/workspace/webpage/index.html
         dest: /var/www/html/index.html
+    - name: Building Docker Image
+      docker_image:
+        name: amazonlinux
+        source: build
+        build:
+          path: ~/home/karthick/
+    -name: Creating the container
+     docker_container:
+       name: amazonlinux
+       image: amazonlinux:latest
+       ports:
+         - "80:80"
+         
