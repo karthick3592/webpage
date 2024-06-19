@@ -21,7 +21,7 @@
         name: latest
         source: build
         build:
-          path: /home/karthick/workspace/webpage
+          path: /home/karthick/workspace/webpage/
     - name: Creating the container
       docker_container:
         name: amazon
