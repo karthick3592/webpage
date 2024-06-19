@@ -21,8 +21,6 @@
       docker_container:
         name: amazon
         image: amazonlinux:latest
-        ports:
-          - "80:80"   
         state: started
    
          
