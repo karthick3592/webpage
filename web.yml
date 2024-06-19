@@ -24,7 +24,7 @@
         image: amazonlinux:latest
         state: started
         ports:
-          - "85:85"
+          - "85:80"
     - name: copy index.html
       community.docker.docker_container_copy_into:
         container: amazon
