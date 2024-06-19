@@ -16,11 +16,6 @@
       ansible.builtin.copy:
         src: /home/karthick/workspace/webpage/index.html
         dest: /var/www/html/index.html
-
-    - name: copy index.html
-      ansible.builtin.copy:
-        src: /home/karthick/workspace/webpage/index.html
-        dest: /var/www/html/index.html
     - name: copy docker file
       ansible.builtin.copy:
         src: /home/karthick/workspace/webpage/Dockerfile
