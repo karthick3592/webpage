@@ -21,8 +21,9 @@
         ports:
           - "80:80"
     - name: copy index.html
-      ansible.builtin.copy:
-        src: /home/karthick/workspace/webpage/index.html
-        dest: /var/www/html/index.html
+      community.docker.docker_container_copy_into:
+        container: amazon
+        path: /home/karthick/workspace/webpage/index.html
+        container_path: /var/www/html/index.html
    
          
