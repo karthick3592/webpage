@@ -26,6 +26,7 @@
         source: build
         build:
           path: /root/project/
+        state: present
     - name: Creating the container
       docker_container:
         name: amazon
