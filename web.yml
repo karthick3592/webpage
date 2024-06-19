@@ -3,6 +3,20 @@
   hosts: web
   become: yes
   tasks:
+  - name: install webserver
+      dnf:
+        name: httpd
+        state: installed
+    - name: start & enable service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+    - name: copy index.html
+      ansible.builtin.copy:
+        src: /home/karthick/workspace/webpage/index.html
+        dest: /var/www/html/index.html
+
     - name: copy index.html
       ansible.builtin.copy:
         src: /home/karthick/workspace/webpage/index.html
