@@ -13,7 +13,7 @@
         dest: /root/project/Dockerfile
     - name: Building Docker Image
       docker_image:
-        name: latest
+        name: amazonlinux:latest
         source: build
         build:
           path: /root/project/
@@ -22,5 +22,7 @@
         name: amazon
         image: amazonlinux:latest
         state: started
+        ports:
+          - "80:80"
    
          
