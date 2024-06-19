@@ -23,15 +23,15 @@
     - name: Building Docker Image
       docker_image:
         name: latest
-        source: build
         build:
           path: /root/project/
+          source: build
         state: present
     - name: Creating the container
       docker_container:
         name: amazon
         image: amazonlinux:latest
-        state: present
+        state: started
         ports:
           - "90:80"    
    
