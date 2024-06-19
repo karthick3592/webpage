@@ -31,6 +31,6 @@
         name: amazon
         image: amazonlinux:latest
         ports:
-          - "80:80"    
+          - "85:85"    
    
          
