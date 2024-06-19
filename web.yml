@@ -24,23 +24,12 @@
         image: amazonlinux:latest
         state: started
         ports:
-          - "80:80"
-    - name: Creating the container
-      docker_container:
-        name: a2
-        image: amazonlinux:latest
-        state: started
-        ports:
-          - "81:80"
+          - "85:85"
     - name: copy index.html
       community.docker.docker_container_copy_into:
         container: amazon
         path: /var/www/html/index.html
         container_path: /var/www/html/index.html
-    - name: copy index.html
-      community.docker.docker_container_copy_into:
-        container: a2
-        path: /var/www/html/index.html
-        container_path: /var/www/html/index.html
+
    
          
