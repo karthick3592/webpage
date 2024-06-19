@@ -30,6 +30,7 @@
       docker_container:
         name: amazon
         image: amazonlinux:latest
+        state: present
         ports:
           - "85:85"    
    
