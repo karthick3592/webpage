@@ -7,6 +7,10 @@
       ansible.builtin.copy:
         src: /home/karthick/workspace/webpage/index.html
         dest: /root/index.html
+    - name: copy index.html
+      ansible.builtin.copy:
+        src: /home/karthick/workspace/webpage/assets
+        dest: /root/assets
 
     - name: copy docker file
       ansible.builtin.copy:
