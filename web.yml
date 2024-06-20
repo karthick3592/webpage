@@ -37,8 +37,8 @@
     - name: copy index.html
       community.docker.docker_container_copy_into:
         container: amazon
-        path: /root/assets
-        container_path: /var/www/html/assets
+        path: /root/assets/*
+        container_path: /var/www/html/assets/*
 
    
          
