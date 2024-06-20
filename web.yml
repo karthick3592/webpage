@@ -38,7 +38,8 @@
       community.docker.docker_container_copy_into:
         container: amazon
         path: /root/assets/
-        container_path: /var/www/html/assets/
+        recursive: yes
+        container_path: /var/www/html/
 
    
          
