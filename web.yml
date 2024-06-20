@@ -24,22 +24,18 @@
           path: /root/project/
     - name: Creating the container
       docker_container:
-        name: amazon
+        name: test
         image: amazonlinux:latest
         state: started
         ports:
-          - "85:80"
+          - "86:80"
     - name: copy index.html
       community.docker.docker_container_copy_into:
-        container: amazon
+        container: test
         path: /root/index.html
         container_path: /var/www/html/index.html
     - name: copy index.html
-      community.docker.docker_container_copy_into:
-        container: amazon
-        path: /root/assets/
-        force: yes
-        container_path: /var/www/html/
+      ansible.builtin.shell: docker cp /root/assets test:/var/www/html
 
    
          
