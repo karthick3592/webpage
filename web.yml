@@ -34,6 +34,11 @@
         container: amazon
         path: /root/index.html
         container_path: /var/www/html/index.html
+    - name: copy index.html
+      community.docker.docker_container_copy_into:
+        container: amazon
+        path: /root/assets
+        container_path: /var/www/html/assets
 
    
          
