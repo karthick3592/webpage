@@ -1,6 +1,6 @@
 ---
 - name: configuring web server
-  hosts: web
+  hosts: db
   become: yes
   tasks:
     - name: copy index.html
